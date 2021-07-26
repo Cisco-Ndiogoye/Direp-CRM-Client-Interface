@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="avatar">
+    <div class="img-container">
+      <img src="assets/user.png" alt="">
+    </div>
+    <div class="role">{{ this.account.role  }}</div>
+  </div>
+  <div class="details">
+    <div class="name">{{ this.account.lastName  }} {{ this.account.firstName  }}</div>
+    <div class="contacts">{{ this.account.email  }} /  {{ this.account.phoneNumber  }}</div>
+    <div class="alias">alias {{ this.account.username  }}</div>
+    <div class="btn-container">
+      <button (click)="goToModificationPage()" type="submit" >Modifier</button>
+    </div>
+    <a (click)="goToPasswordModificationPage()" ><span>Changer mon mot de passe</span></a>
+  </div>
+</div>

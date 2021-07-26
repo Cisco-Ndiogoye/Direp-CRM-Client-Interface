@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;800&display=swap');
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+}
+
+
+.img-logo {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+.img-logo img {
+  max-height: 250px;
+}
+
+h2 {
+  text-align: center;
+  font-size: 48px;
+  font-weight: bolder;
+  color: #90C226;
+  margin-block-start: 0;
+  margin-block-end: 1%;
+}
+
+.form-container {
+  min-width: 50%;
+  align-items: center;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+}
+
+.form-group input {
+  display: block;
+  height: 50px;
+  border-radius: 100px;
+  border: 1px solid #90C226;
+  max-width: 300px;
+  padding: 2.5% 10%;
+  margin-bottom: 5%;
+  font-size: 24px;
+  font-weight: 700;
+  color: #58585A;
+  box-sizing: border-box;
+}
+
+input, textarea, select, button { font-family:inherit; }
+
+/* Change the white to any color */
+.form-group input:-webkit-autofill, .form-group input:-webkit-autofill:hover, .form-group input:-webkit-autofill:focus, .form-group input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+
+.form-container a {
+  color: #58585A;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 5%;
+}
+
+.form-container button {
+  width: fit-content;
+  padding: 5%;
+  display: inline-flex;
+  align-items: center;
+  margin: auto;
+  height: 50px;
+  border-radius: 50px;
+  border: none;
+  background-color: #90C226;
+  font-size: 24px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 767px) {
+
+  .img-logo img {
+    object-fit: cover;
+    width: 100%;
+  }
+
+}
