@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="avatar">
+    <div class="img-container">
+      <img src="assets/user.png" alt="">
+    </div>
+    <div class="role">{{ (this.account$ | async).role }}</div>
+  </div>
+  <div class="details">
+    <div class="name">{{ (this.account$ | async).lastName }} {{ (this.account$ | async).firstName }}</div>
+    <div class="contacts">{{ (this.account$ | async).email }} /  {{ (this.account$ | async).phoneNumber  }}</div>
+    <div class="alias">alias {{ (this.account$ | async).username  }}</div>
+    <div class="btn-container">
+      <button (click)="goToModificationPage()" type="submit" >Modifier</button>
+    </div>
+    <a (click)="goToPasswordModificationPage()" ><span>Changer mon mot de passe</span></a>
+    <a *ngIf="(this.account$ | async).role === 'ADMINISTRATOR'"  (click)="goToUserCreationPage()" ><span>Ajouter un utilisateur</span></a>
+  </div>
+</div>

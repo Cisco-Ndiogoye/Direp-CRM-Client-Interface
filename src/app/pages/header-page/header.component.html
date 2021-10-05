@@ -1,0 +1,34 @@
+<div class="flex">
+  <div class="logo">
+    <a href="/">
+      <img src="assets/Logo@1000x400-Monochrome-Fond-Vert.png" alt="">
+    </a>
+  </div>
+  <div class="nav-btn">
+    <a href="#" (click)="myFunction()" class="icon">
+      <fa-icon [icon]="faBars" size="lg"></fa-icon>
+    </a>
+  </div>
+  <div class="nav-links pdr-25" id="nav-links">
+    <div class="nav-link">
+      <a routerLink="/dashbord">Dashboard</a>
+    </div>
+    <div class="nav-link">
+      <a href="#">Programme</a>
+    </div>
+    <div class="nav-link">
+      <a href="#">Equipes</a>
+    </div>
+    <div class="nav-link">
+      <a routerLink="/prescriber" >Prescripteurs</a>
+    </div>
+  </div>
+  <div class="nav-links nav-links-2">
+    <div class="nav-icon">
+        <fa-icon (click)="goToProfile()" [icon]="faUserCircle" size="lg"></fa-icon>
+    </div>
+    <div class="nav-icon">
+        <fa-icon (click)="logOut()" [icon]="faSignOutAlt" size="lg"></fa-icon>
+    </div>
+  </div>
+</div>

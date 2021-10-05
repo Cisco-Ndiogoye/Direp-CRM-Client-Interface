@@ -1,0 +1,41 @@
+<div class="container">
+  <h2>Ajouter un utilisateur</h2>
+  <form class="form-container" #f="ngForm" (ngSubmit)="addUser()" >
+    <div class="select-group">
+      <select name="lastName" [(ngModel)]="account.role" required>
+        <option value="" disabled selected>Role</option>
+        <option [ngValue]="Role.Administrator">Administrateur</option>
+        <option [ngValue]="Role.Manager">Manager</option>
+        <option [ngValue]="Role.Representative">Délégué</option>
+      </select>
+    </div>
+    <div class="select-group">
+      <select name="lastName" aria-placeholder="Equipe" [(ngModel)]="account.team" required>
+        <option value="" disabled selected>Equipe</option>
+        <option *ngFor="let team of teamList"  [ngValue]="team">{{ team.teamDesignation }}</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <input type="text" placeholder="Nom" name="lastName" [(ngModel)]="account.lastName" required>
+    </div>
+    <div class="form-group">
+      <input type="text" placeholder="Prenom" name="firstName" [(ngModel)]="account.firstName" required>
+    </div>
+    <div class="form-group">
+      <input type="text" placeholder="Nom d'utilisateur" name="username" [(ngModel)]="account.username" required>
+    </div>
+    <div class="form-group">
+      <input type="password" placeholder="Mot de passe" name="password" [(ngModel)]="account.password" required>
+    </div>
+    <div class="form-group">
+      <input type="password" placeholder="Confirmer votre mot de passe" name="repassword" [(ngModel)]="rePassword" required>
+    </div>
+    <div class="form-group">
+      <input type="email" placeholder="Email"  name="email" [(ngModel)]="account.email" required>
+    </div>
+    <div class="form-group">
+      <input type="text" placeholder="Téléphone" name="phoneNumber" [(ngModel)]="account.phoneNumber" required>
+    </div>
+    <button type="submit" >Enregistrer</button>
+  </form>
+</div>
